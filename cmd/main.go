@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"time"
@@ -39,5 +40,5 @@ func main() {
 
 	log.Print("Succesfully loaded routes")
 
-	http.ListenAndServe(":3333", r)
+	http.ListenAndServe(fmt.Sprintf(":%s", cfg.ServerConfig.Port), r)
 }

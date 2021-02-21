@@ -26,7 +26,7 @@ func DefaultCfg() *Config {
 	return &Config{
 		Environment: "dev",
 		ServerConfig: ServerConfig{
-			Port: "3333",
+			Port: "5000",
 		},
 		DBConfig: DBConfig{
 			DBUser: "postgres",
