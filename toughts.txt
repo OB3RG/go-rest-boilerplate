@@ -1,0 +1,16 @@
+# CMS
+
+## Article
+ Store Markdown
+ Meta
+ State
+ Author
+ Pictures?
+
+## Author
+  Should this be user?
+  or just "user profile" and get user from keycloak for example
+
+# Other
+No comment functionality
+

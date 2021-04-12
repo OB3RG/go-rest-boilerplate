@@ -1,0 +1,30 @@
+version: "3.5"
+services:
+  api:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile.local
+    volumes:
+      - ".:/app"
+    ports:
+      - "5000:5000"
+    command: bash -c "go mod download && make serve"
+    networks:
+      - api-network
+
+  # database:
+    # image: postgres:12
+    # restart: always
+    # ports:
+      # - "5432:5432"
+    # command: -p 5432
+    # networks:
+      # - api-network
+    # volumes:
+  #     - pgdata:/var/lib/postgresql/data
+
+networks:
+  api-network: {}
+volumes:
+  pgdata: {}
